@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Microsoft Azure 6-Month Training Plan</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Roboto', 'Open Sans', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #f3f4f6, #dde3e9);
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    /* Sticky Header */
+    header {
+      position: sticky;
+      top: 0;
+      background-color: #1E2A47;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      z-index: 1000;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      font-size: 2.5rem;
+    }
+
+    header h1 {
+      margin: 0;
+      animation: slideIn 1s ease-out;
+    }
+
+    /* Container */
+    .container {
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+
+    /* Card Styles */
+    .card {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+      width: 280px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      overflow: hidden;
+      position: relative;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+    .card h2 {
+      background-color: #3F51B5;
+      color: white;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+      font-size: 1.5rem;
+    }
+    .card .content {
+      padding: 20px;
+    }
+    .card ul {
+      list-style: none;
+      padding: 0;
+    }
+    .card ul li {
+      margin-bottom: 10px;
+      padding: 5px 10px;
+      background: #f1f1f1;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    .card ul li:hover {
+      background-color: #e0e7ff;
+    }
+    .schedule {
+      margin-top: 20px;
+      padding: 15px;
+      background: #f9f9f9;
+      border-left: 4px solid #3F51B5;
+    }
+    .schedule strong {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    /* Tooltip */
+    .tooltip {
+      position: relative;
+      cursor: pointer;
+    }
+    .tooltip::after {
+      content: attr(data-tooltip);
+      position: absolute;
+      top: -40px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0, 0, 0, 0.8);
+      color: white;
+      padding: 5px 10px;
+      border-radius: 5px;
+      white-space: nowrap;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+    .tooltip:hover::after {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    /* Progress Bar */
+    .progress {
+      margin: 10px 0;
+      height: 8px;
+      border-radius: 4px;
+      background: #ddd;
+      overflow: hidden;
+      position: relative;
+    }
+    .progress span {
+      display: block;
+      height: 100%;
+      background: #3F51B5;
+      width: 0;
+      animation: fillProgress 2s forwards;
+    }
+    @keyframes fillProgress {
+      to {
+        width: 100%;
+      }
+    }
+
+    /* Animations */
+    @keyframes slideIn {
+      from {
+        transform: translateY(-50px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    /* Footer */
+    footer {
+      background-color: #1E2A47;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      margin-top: 40px;
+    }
+    footer a {
+      color: #2196F3;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    /* Scroll Animation */
+    .scroll-section {
+      scroll-snap-type: y mandatory;
+      overflow-y: scroll;
+      height: 70vh;
+      scroll-behavior: smooth;
+    }
+
+    .scroll-section .scroll-item {
+      scroll-snap-align: start;
+      padding: 20px;
+      background: #e3f2fd;
+      margin-bottom: 20px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Microsoft Azure 6-Month Training Plan</h1>
+</header>
+
+<div class="container">
+  <!-- Month 1 -->
+  <div class="card">
+    <h2>Month 1: Azure Fundamentals</h2>
+    <div class="content">
+      <p class="tooltip" data-tooltip="Learn the basics of Azure and cloud computing.">Focus: Cloud Basics</p>
+      <ul>
+        <li>Understanding Cloud Concepts</li>
+        <li>Setting Up Azure Environment</li>
+        <li>Basic Azure Services Overview</li>
+      </ul>
+      <p class="schedule">
+        <strong>Target Certification:</strong> AZ-900<br>
+        <strong>Weekly Plan:</strong> Mon-Fri (Theory), Sat (Interview), Sun (Hands-On)
+      </p>
+      <div class="progress">
+        <span style="width: 100%;"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Month 2 -->
+  <div class="card">
+    <h2>Month 2: Azure Administrator Basics</h2>
+    <div class="content">
+      <p class="tooltip" data-tooltip="Gain hands-on experience with Azure administration.">Focus: Resource Management</p>
+      <ul>
+        <li>Resource Manager</li>
+        <li>Virtual Networks</li>
+        <li>Virtual Machines</li>
+      </ul>
+      <p class="schedule">
+        <strong>Target Certification:</strong> AZ-104<br>
+        <strong>Weekly Plan:</strong> Mon-Fri (Theory), Sat (Interview), Sun (Hands-On)
+      </p>
+      <div class="progress">
+        <span style="width: 80%;"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Month 3 -->
+  <div class="card">
+    <h2>Month 3: Azure Developer Fundamentals</h2>
+    <div class="content">
+      <p class="tooltip" data-tooltip="Master the basics of Azure development tools.">Focus: DevOps & Development</p>
+      <ul>
+        <li>Developing Azure Solutions</li>
+        <li>Azure DevOps Practices</li>
+        <li>App Service Deployment</li>
+      </ul>
+      <p class="schedule">
+        <strong>Target Certification:</strong> AZ-204<br>
+        <strong>Weekly Plan:</strong> Mon-Fri (Theory), Sat (Interview), Sun (Hands-On)
+      </p>
+      <div class="progress">
+        <span style="width: 60%;"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Month 4 -->
+  <div class="card">
+    <h2>Month 4: Azure Security Fundamentals</h2>
+    <div class="content">
+      <p class="tooltip" data-tooltip="Understand Azure security principles and practices.">Focus: Security & Identity</p>
+      <ul>
+        <li>Azure Security Center</li>
+        <li>Azure Identity Services</li>
+        <li>Network Security</li>
+      </ul>
+      <p class="schedule">
+        <strong>Target Certification:</strong> AZ-500<br>
+        <strong>Weekly Plan:</strong> Mon-Fri (Theory), Sat (Interview), Sun (Hands-On)
+      </p>
+      <div class="progress">
+        <span style="width: 40%;"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Month 5 -->
+  <div class="card">
+    <h2>Month 5: Azure AI Fundamentals</h2>
+    <div class="content">
+      <p class="tooltip" data-tooltip="Learn the fundamentals of AI in Azure.">Focus: AI & ML</p>
+      <ul>
+        <li>AI Principles and Services</li>
+        <li>Machine Learning Integration</li>
+        <li>Azure Cognitive Services</li>
+      </ul>
+      <p class="schedule">
+        <strong>Target Certification:</strong> AZ-900 (AI)<br>
+        <strong>Weekly Plan:</strong> Mon-Fri (Theory), Sat (Interview), Sun (Hands-On)
+      </p>
+      <div class="progress">
+        <span style="width: 30%;"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Month 6 -->
+  <div class="card">
+    <h2>Month 6: Azure Architecting Solutions</h2>
+    <div class="content">
+      <p class="tooltip" data-tooltip="Deep dive into Azure architecture and advanced services.">Focus: Advanced Architecture</p>
+      <ul>
+        <li>Designing Azure Solutions</li>
+        <li>Architecture Best Practices</li>
+        <li>Monitoring and Optimization</li>
+      </ul>
+      <p class="schedule">
+        <strong>Target Certification:</strong> AZ-303<br>
+        <strong>Weekly Plan:</strong> Mon-Fri (Theory), Sat (Interview), Sun (Hands-On)
+      </p>
+      <div class="progress">
+        <span style="width: 20%;"></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</body>
+</html>
